@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
++
+<html>
+<head>
+    <title>What are my plugins?</title>
+	<meta charset="utf-8" />
+</head>
+<body bgcolor="#FFFFFF">
+    <script language="Javascript" type="text/javascript">
+        if (navigator.plugins && navigator.plugins.length > 0) {
+            document.write("You have follwing plugins: <table cellspacing='4' cellpadding='4'>")
+            document.write("<tr><th bgcolor='#CCCCCC'>Name<\/th><th bgcolor='#CCCCCC'>FileName<\/th><th bgcolor='#CCCCCC'>Description<\/th><\/tr>")
+            for (i = 0; i < navigator.plugins.length; i++) {
+                thisPlugin = navigator.plugins[i]
+                document.write("<tr valign='top'><td bgcolor='#CCCCCC'>" + thisPlugin.name)
+                document.write("<\/td><td bgcolor='#CCCCCC'>"+thisPlugin.filename )
+                document.write("<\/td><td bgcolor='#CCCCCC'>" + thisPlugin.description+"<\/td><\/tr>")
+            }
+            document.write("<\/table>")
+        } else {
+            document.write("JavaScript couldn't find any plugins")
+        }
+
+    </script>
+</body>
+</html>

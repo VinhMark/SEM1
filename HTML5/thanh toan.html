@@ -1,0 +1,56 @@
+<html>
+	<head>
+			<style>
+			.wrap{
+				margin: 10px auto;
+				border: 1px solid #ccc;
+				width: 500px;
+				padding: 10px;
+				height: 110px;
+			}
+			label.title{
+				width: 200px;
+				float: left;
+				
+			}
+			.row{
+				padding-top: 2px;
+			}
+			output{
+				border: 1px solid #5c5c5c;
+				float: left;
+				width: 100px;
+				height: 23px;
+			}
+			.PaymentTitle{float: left;}
+		</style>
+	</head>
+	<body>
+		<form oninput="x.value = parseInt(type.value) * parseInt(year.value)">
+		<div class="swap">
+			<div class="row">
+				<label>
+					Menbership Card:
+				</label>	
+				<select name="type">
+					<option value="500">Gold 500$</option>
+					<option value="400">Silver 400$</option>
+					<option value="700">Platium 700$</option>
+				</select>
+			</div>	
+			<br/>
+			
+			<div class="row">
+				<laber>Year</laber>
+				<input type="number" name="year" value="0" min="1" max="10" step="1"/><br/><!--step=1 tang mot gai tri mot lan tang-->
+			</div>	
+			<br/>
+			<div class="row">
+				<label class="paymentTitle">Anual Payment Fees:$.</label>
+				<output name="x" for="type year"></output>
+			</div>
+			
+		</div>	
+		</form>
+	</body>
+</html> 

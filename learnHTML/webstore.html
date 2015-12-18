@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function Checksupport() {
+            if ('sessionStorage' in window && window['sessionStorage'] != null) {
+                //alert('Supported');
+                sessionStorage.setItem('Lastname', 'abc');
+                sessionStorage.setItem('Firstname', 'DEF');
+                sessionStorage.setItem('Age', '35');
+                return;
+            }
+            //} else {
+                alert('not Supported');         
+        }
+        function getStorage() {
+            document.getElementById('result').innerHTML=
+            sessionStorage.removeItem('Lastname');
+            alert('My name is ' + ' ' + sessionStorage.getItem('Lastname') + ' '
+                + sessionStorage.getItem('Firstname') + ' '
+                + sessionStorage.getItem('Age'));
+        }
+        function removeStorage() {
+            sessionStorage.removeItem('Lastname');
+        }
+        function clearStorage() {
+            sessionStorage.clear();
+        }
+    </script>
+</head>
+<body onload="Checksupport()">
+    <button onclick="getStorage()">getStorage</button>
+    <button onclick="removeStorage()">Remore</button>
+    <button onclick="clearStorage()">Clear</button>
+    <div class="result"></div>
+</body>
+</html>

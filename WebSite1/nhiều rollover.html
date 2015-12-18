@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>A Simple Rollover</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        if (document.images) {
+            buttom1Red = new Image
+            buttom1Blue = new Image
+            buttom2Red = new Image
+            buttom2Blue = new Image
+
+            buttom1Red.src = "image/red.jpg"
+            buttom1Blue.src = "image/blue.jpg"
+            buttom2Red.src = "image/red.jpg"
+            buttom2Blue.src="image/blue.jpg"
+        } else {
+            buttom1Red = ""
+            buttom1Blue = ""
+            buttom2Red = ""
+            buttom2Blue = ""
+
+            document.buttom1 = ""
+            document.buttom2 = ""
+
+        }
+    </script>
+</head>
+<body bgcolcor="#CFCFCF">
+    <a href="HtmlPage.html" onmouseover="document.buttom1.src=buttom1Red.src" 
+       onmouseout="document.buttom1.src=buttom1Blue.src">
+    <img src="image/blue.jpg" width="113" height="33" border="0" name="buttom1" alt="buttom1" /></a>
+    <a href="gọi hàm.html" onmouseover="document.buttom2.src=buttom2Red.src" 
+       onmouseout="document,buttom2.src=buttom2Blue.src">
+        <img src="image/red.jpg" width="113" height="33" border="0" name="buttom2" alt="buttom2" />
+    </a>
+</body>
+</html>

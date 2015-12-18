@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('p').hover(function () {
+                //$('p').css('background-color', 'red');//this
+                $(this).css('background-color', 'red');
+            }, function () {
+                $('p').css('background-color', 'green');
+            });
+            $('p').click(function () {
+                var obj = $('img').parent();
+                if (obj.css('display') == 'none')
+                    obj.slideDown();    
+                else
+                    obj.slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="row">
+        <p>Hover the mouse on this live</p>
+    </div>
+    <div style="display:none;">
+        <img src="image/logo.png" width="1366" height="768" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Thumbnail</title>
+    <style>
+        /* general */
+        body {
+            margin: 0;
+            padding: 40px 80px;
+            background: #fff;
+            font: 70% Arial, Helvetica, sans-serif;
+            color: #555;
+            line-height: 100%;
+        }
+
+        h1, h2 {
+            font-size: 180%;
+            font-weight: normal;
+            color: #555;
+        }
+
+        p {
+            margin: 1em 0;
+        }
+
+            p.text {
+                width: 500px;
+            }
+
+        a {
+            color: #f20;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: #999;
+            }
+
+        img {
+            border: none;
+        }
+        /* // general */
+        /* thumbnail list */
+        ul#thumbs, ul#thumbs li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            ul#thumbs li {
+                float: left;
+                margin-right: 0px;
+                border: 1px solid #999;
+                padding: 2px;
+            }
+
+            ul#thumbs a {
+                display: block;
+                float: left;
+                width: 125px;
+                height: 135px;
+                line-height: 50px;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+            }
+
+                ul#thumbs a img {
+                    float: left;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+                /* mouse over */
+                ul#thumbs a:hover {
+                    overflow: visible;
+                    z-index: 1000;
+                    border: none;
+                }
+
+                    ul#thumbs a:hover img {
+                        border: 1px solid #999;
+                        background: #fff;
+                        padding: 2px;
+                    }
+            /* // mouse over */
+            /* clearing floats */
+            ul#thumbs:after, li#thumbs:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+        ul#thumbs, li#thumbs {
+            display: block;
+        }
+
+        ul#thumbs, li#thumbs {
+            min-height: 1%;
+        }
+
+        * html ul#thumbs, * html li#thumbs {
+            height: 1%;
+        }
+        /* // clearing floats */
+        /* // thumbnail list */
+    </style>
+</head>
+<body>
+    <h2>Thumbnail</h2>
+    <ul id="thumbs">
+        <li>
+            <a href="images/HTML5.png" target="_blank">
+                <img src="images/HTML5.jpg" />
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

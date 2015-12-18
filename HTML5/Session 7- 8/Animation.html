@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+		.box{left: 400px;}
+			
+        .box{
+		position: absolute; 
+		overflow: hidden;
+		}
+		 .hidden .box {
+			background: yellow;
+            height: 300px;
+            position: relative; 
+			top: 0;left: 0px;
+            width: 500px;
+			opacity: 1;
+              
+            }
+			
+        div {
+          
+            /* Firefox: */
+            -moz-animation-name: myfirst;
+            -moz-animation-duration: 4s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-delay: 1s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-direction: alternate;
+            -moz-animation-play-state: running;
+       
+        }
+
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 100px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 0px;
+            }
+
+            75% {
+                background: green;
+                left: 300px;
+                top: 0px;
+            }
+
+            100% {
+                background: red;
+                left: 400px;
+                top: 0px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p><b>Note:</b> Animation</p>
+
+  <div class="box">
+	<div class="hidden">
+	  
+			<img src="images/photo_unavailable.png" width="100px" height="100px">
+	</div>
+	</div>
+</body>
+</html>

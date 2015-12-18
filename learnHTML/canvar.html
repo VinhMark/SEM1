@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        canvas{
+            border: medium double red;
+            margin: 4px; 
+        }
+        
+    </style>
+    <script type="text/javascript">
+        //window.onload = function () {
+          //  var canvas = document.getElementById('mCanvas');
+            //var ctext = canvas.getContext('2d');
+            //ctext.beginPath();
+            //ctext.rect(15, 50, 200, 100);//15:cach le trai,50:cach top la 50 ; con lai la chieu rong va chieu cao
+            //ctext.fillStyle = 'DarkBlue';
+            //ctext.fill();
+        //}
+        /*window.onload = function () {
+            var canvas = document.getElementById('mCanvas');
+            var ctext = canvas.getContext('2d');
+            ctext.beginPath();
+            ctext.moveTo(100, 150);
+            ctext.lineTo(250, 50);
+            ctext.lineWidth = 5;
+            ctext.strokeStyle = 'blue';
+            ctext.stroke();
+        }*/
+        //c{
+        //    var canvas = document.getElementById('mCanvas');
+        //    var ctext = canvas.getContext('2d');
+         //   ctext.beginPath();
+        //    ctext.rect(15, 50, 200, 100);
+         //   ctext.fillStyle = 'DarkBlue';
+            //...
+        //    ctext.fill();
+        //    ctext.lineWidth = 5 ;
+         //   ctext.strokeStyle = 'black';
+         //   ctext.stroke();
+        
+        //  }
+
+
+        /*window.onload = function () {
+            var canvas = document.getElementById('mCanvas');
+            var ctext = canvas.getContext('2d');
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 100;//do rong tam hinh tron
+            var starpoint = 0 * Math.PI;//vong tron di tu 0 -2pi
+            var endpoint = 2 * Math.PI;
+            var clockwise = false;
+            ctext.arc(x, y, radius, starpoint, endpoint, clockwise);
+            ctext.lineWidth = 5;//do rong duong hinh tron
+            ctext.strokeStyle = 'Green';
+            ctext.stroke();
+        }*/
+
+    //    window.onload = function (){
+    //        var canvas = document.getElementById('mCanvas');
+    //        var ctext = canvas.getContext('2d');
+    //        var imgObj = new Image();
+    //        imgObj.onload = function(){
+    //            ctext.drawImage(imgObj, 0/*toa do x*/ ,0/*toa do y*/,500,500);//200,100 la width height
+    //        }
+     //       imgObj.src = 'image/logo.png';
+        //    }
+
+        window.onload = function () {
+            var canvas = document.getElementById('mCanvas');
+            var ctext = canvas.getContext('2d');
+            ctext.font = 'italic 30pt Tohoma';
+            ctext.lineWidth = 2;
+            //ctext.fillStyle = 'red';
+            ctext.strokeStyle = '#04fb07';
+            //ctext.fillText('Well come to HTML5', 40, 50);
+            ctext.strokeText('HTMl5', 40, 50);
+        }
+    </script>
+</head>
+<body>
+    <canvas width="500" height="500" id="mCanvas"></canvas>
+</body>
+</html>

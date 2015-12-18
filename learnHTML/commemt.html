@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnSubmit').click(function () {
+                var txtUser = $('#txtUserName');
+                var txtEmail = $('#txtEmail');
+                if (txtUser.val().trim() == '') {
+                    alert('User nam is not empty');
+                    return;
+                }
+                if (txtEmail.val().trim() == '') {
+                    alert('Email is not empty');
+                    return;
+                } else {
+                    var EmailPatten = /^([a-zA-Z0-9_\-\.])+\@([a-zA-Z0-9_\-\.])+\.([a-zA-Z]{2,4})$/
+                    var code = EmailPatten.exec(txtEmail.val());
+                        if (code == null) {
+                            alert('Your emial is invalid ! please enter your again!');
+                        } else {
+                            alert('Email is valid');
+                        }
+                    }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>USER name</label>
+        <input type="text" required id="txtUserName" />
+        <br />
+        <br />
+        <label>Email</label>
+        <input type="email" required id="txtEmail" />
+        <br />
+        <label style="float:left">Comment</label>
+        <textarea rows="4"></textarea>
+        <hr />
+        <input type="submit" id="btnSubmit" />
+
+    </form>
+</body>
+</html>

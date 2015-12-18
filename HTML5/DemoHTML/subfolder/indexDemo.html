@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			margin: 0;
+			padding:0;
+			font: 12px Arial tahoma ;
+			color: #000000;
+			background: #ffffff;
+			
+		}
+		h1,h2{
+			font-size: 180%;
+			font-weight: normal;
+			color: #555;
+		}
+		p{
+			margin: 1em 0;
+		}
+		p.text{
+			width: 500px;
+		}
+		a{
+			color: #f20;
+			text-decoration: none; /*text-decoration: gach chan, gach ngang chu*/
+		}
+		a:hover {
+			color: #999;
+		}
+		img{
+			border: none;
+		}
+		ul#thumbs, ul#thumbs li {
+			margin: 0;
+			padding: 0;
+			list-style: decimal;
+		}
+		ul#thumbs li{
+			float: left;
+			border: 1px solid #ccc;
+			padding: 2px 5px;
+		}
+		ul#thumbs a{
+			display: block;
+			float: left;
+			width: 135px;
+			height: 125px;
+			line-height: 50px;
+			overflow: hidden;
+			z-index: 1;
+			position: relative;
+		}
+		ul#thumbs a img {
+			top: 0;
+			left: 0;
+			float: left;
+			position: absolute;
+		}
+		ul#thumbs a:hover{
+			overflow: visible;
+			z-index: 1000;
+		}
+		ul#thumbs a:hover img{
+			border: 1px solid #999;
+			background: #fff;
+			padding: 2px;
+		}
+		ul#thumbs:after, li:after{
+		}
+	</style>
+</head>
+<body>
+	<h2> Thumbnails</h2>	
+	<ul id="thumbs">
+		<li>
+			<a href="HTML5.png" target="_blank">
+				<img src="images/HTML5.png"/>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+            /* Firefox 4 */
+            -moz-transition-property: width;
+            -moz-transition-duration: 2s;
+            -moz-transition-timing-function: linear;
+            -moz-transition-delay: 1s;
+            /* Safari and Chrome */
+            -webkit-transition-property: width;
+            -webkit-transition-duration: 2s;
+            -webkit-transition-timing-function: linear;
+            -webkit-transition-delay: 1s;
+        }
+
+            div:hover {
+                width: 1500px;
+            }
+    </style>
+</head>
+<body>
+    <p><b>Note:</b> The example</p>
+
+    <div></div>
+
+    <p>
+        Hover over the div element above, to see the transition
+        effect.
+    </p>
+    <p>
+        <b>Note:</b> The transition effect will wait 1 seconds
+        before starting.
+    </p>
+</body>
+</html>

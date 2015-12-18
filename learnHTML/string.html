@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        /*var objString = new String("Javarscript" + "is a program");
+        if (objString.indexOf("program") > 0) {
+            document.write('this is a setence for inducation');
+        }
+             var arr = objString.split(" ");
+             for (var i = 0 ; i < arr.length ; i++) {
+                 document.write(arr[i] + "<br/>");
+             }*/
+        var today = new Date();
+        var date = today.getDate();
+        var month = today.getMonth() + 1;// month bat dau tu 0 nen fai cong them 1 
+        var year = today.getFullYear();
+        document.write('today is ' + date + '/' + month + '/' + year);
+        var object = confirm('today is ' + date + '/' + month + '/' + year);
+        if(obj){
+            window.open('http://vnexpress.net', '_parent');
+        }
+        document.write('obj.tostring');
+        if(obj){
+            history.back();
+        }
+        function checkBrowser() {
+            /* document.write(navigator.appName + '<br/>');
+            document.write(navigator.appVersion + '<br/>');
+            document.write(navigator.browserLanguage + '<br/>');
+            document.write(navigator.platform + '<br/>');
+            document.write(navigator.cookieEnabled + '<br/>');
+            if (navigator.cookieEnabled) {
+                document.write('cookie is enable');
+            }*/
+            var arr = document.getElementsByTagName('div');
+            for(var i =0;i<arr.length;i++){
+                alert(arr[i].innerHTML);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkBrowser()">check</button>
+    <div>text 1</div>
+    <div></div>
+</body>
+</html>

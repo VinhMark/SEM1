@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Javscript</title>
+	<meta charset="utf-8" />
+    <script language="Javascript" type="text/javascript">
+        hasQt = false
+        for (i = 0; i < navigator.plugins.length; i++) {
+            if (navigator.plugins[i].name.indexOf("QuickTime") >= 0) {
+                hasQt=true
+            }
+        }
+        function saySomething(message) {
+            alert("message")
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <script language="Javascript" type="text/javascript">
+        if (hasQt) {
+            document.write("<embed src='image/logo.png' width='350' height='250'></embed>")
+        } else {
+            document.write("<img src='image/ip5.jpg' alt='come' width='320' height='208'\/>")
+        }
+    </script>
+    <hr />
+    <h2>
+        Famous Presidential Quoted
+    </h2>
+    <hr />
+    <form action="#">
+        <input type="button" value="Lincol" onclick="saySomething('Four score and seven years ago...')" />
+        <input type="button" value="Kennedy" onclick="saySomething('Ask not what your country can do for you...')" />
+        <input type="button" value="Nixon" onclick="saySomething('I am not a crook...')" />
+    </form>
+</body>
+</html>

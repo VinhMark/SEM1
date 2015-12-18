@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<style>
+			input:required{
+				outline:1px black solid;
+				color:green;
+			}
+			input:required:valid{
+				outline:1px yellow solid;
+			}
+			input:required:invalid{
+				outline:1px red solid;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table>
+			<tr><!--tabindex="1"la de tab den vi tri tiep theo -->
+					<td>
+						Url
+					</td>
+					<td>
+						<input type="url"  maxlength="10" tabindex="1" required="true"/>
+					</td>
+				<caption>Demo iput data</caption>
+			<tr>
+					<td>
+						Age
+					</td>
+					<td>
+						<input type="number" min="0" max="99"/>
+					</td>
+			</tr>
+					<!--placeholder la ten text vao trong -->
+					<td colspan="2">
+						<input type="Email"  required="true" placeholder="Email" multiple autocomplete="off"/><!--multiple cho phep go nhieu-->
+						<!--autocomplete khong luu cac dia chi khi nhap nhieu lan-->
+			<tr>
+					<td>
+						Phone
+					</td>
+					<td><!--ngoac{xac dinh chieu dai}[xac dinh kieu]-->
+						<input type="tel"  maxlength="11" tabindex="2" placeholder="(+84) 090456789" pattern="[0-9,a-z,A-Z]{10,11}" title="place, intput phone number"/>
+					</td>
+			</tr>
+					<td>
+						Rage
+					</td>
+					<td>
+						<input type="range"  min="0" max="10"/>
+					</td>
+			<!--show ra bang ngay thag nam -->
+			<tr>
+				<tr>
+					<td>
+						Birth date
+					</td>
+					<td>
+						<input type="date"/>
+					</td>
+					<td>
+						<input type="week"/>
+					</td>
+					<td>
+						<input type="month"/>
+					</td>
+					<td>
+						<input type="time"/>
+					</td>
+			</tr>
+			<tr>
+					<td>
+						What's color do you like?
+					</td>
+					<td>
+						<input type="color" />
+					</td>
+			</tr>		
+			<tr>
+					<td>
+						payment methout
+					</td>
+					<td>
+						<!--co the nhap va chon-->
+						<input type="text" list="payment">
+						<datalist id="payment">
+							<option value="credit card"/>
+							<option value="edit card"/>
+							<option value="atm"/>
+						</datalist>
+						<br/>
+						<select>
+							<option type="creaditcard">creaditcard</option>
+							<option type="editcard">editcard</option>
+							<option type="atm">atm</option>
+						</select>
+					</td>
+					<td>
+						<input type="color" />
+					</td>
+			</tr>		
+					
+			<tr>
+					<td colspan="2" style="text-align:center">
+						<input type="submit" value="submit"/>
+					</td>
+			</tr>
+				
+			</table>
+		</form>
+	</body>
+</html>

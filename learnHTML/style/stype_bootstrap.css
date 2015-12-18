@@ -1,0 +1,15 @@
+img {
+		width:60%;
+	}
+@media(min-width:481px) and (max-width:767px){
+    .test-hidden {
+        display:none;
+    }
+}
+@media(max-width: 767px){
+            .test-demo{
+                display: none;
+            }img{
+                 width:30%;
+             }
+        }

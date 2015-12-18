@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+ 
+        var arrayBangDiem = new Array(5);
+        var arryFirstName = new Array('Tuan', 'Thao', 'Ngan', 'Tai', 'an');
+        var arryLastName = new Array('Nguyen', 'Tran', 'Le', 'Truong', 'Dao');
+        // lay so tu 1-10
+        Math.floor((Math.random() * 10) + 1);
+        
+        /*arrayBangDiem[0] = new Array('Nguyen Van A', 8);
+        arrayBangDiem[1] = new Array('Nguyen Van B', 7);
+        arrayBangDiem[2] = new Array('Nguyen Van C', 9);
+        arrayBangDiem[3] = new Array('Nguyen Van D', 6);
+        arrayBangDiem[4] = new Array('Nguyen Van E', 7);*/
+
+        }
+        for (var i = 0 ; i < 5 ; i++) {
+            //document.write('Ten:' + arrayBangDiem[i][0] + 'Diem:' + arrayBangDiem[i][1]);
+            var temp1 = Math.floor((Math.random() * 10) + 1);
+            temp1 = temp1 > 4
+                ? (temp1 - 5) > 4
+                    ? temp1 - 10 : (temp1 - 5)
+                : temp1;
+            var temp2 = Math.floor((Math.random() * 10) + 1);
+            temp2 = temp2 > 4
+                ? (temp2 - 5) > 4
+                    ? temp2 - 10 : (temp2 - 5)
+                : temp2;
+
+           //2 document.write(arryLastName[temp1] + ' ' + arryFirstName[temp2] + '<br/>');
+            arrayBangDiem[i]=new Array(arryLastName[temp1] + ' ' + arryFirstName[temp2] ,  Math.floor((Math.random()*10)-1))
+        }
+        for (var i = 0; arrayBangDiem.length ; i++) {
+            document.write('Tên sv:' + arrayBangDiem[i][0] + ' ' + '-Điểm' + ' '+ arrayBangDiem[i][1] + '<br/>')
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

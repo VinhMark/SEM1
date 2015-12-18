@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>A Simple Rollover</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        if (document.images) {
+            arrowRed = new Image
+            arrowBlue = new Image
+
+            arrowRed.src = 'image/red.jpg'
+            arrowBlue.src="image/blue.jpg"
+        } else {
+            arrowRed = ""
+            arrowBlue = ""
+            document.arrow = ""
+
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFF">
+    <a href="image/logo_mp3.jpg" onmouseover="document.arrow.src='arrowRed.src'" onmouseout="document.arrow.src='arrowBlue.src'"><img src="image/blue.jpg" width="147" height="82" name="arrow" alt="arrow" /></a>
+</body>
+</html>

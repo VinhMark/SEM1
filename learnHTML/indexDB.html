@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        var indexedDB = window.indexedDB 
+        var request = indexedDB.open('CompanyDB', 1);
+        request.onsuccess = function () {
+            console.log('Creat sucess');
+        }
+        request.error = function () {
+            console.log('error');
+        }
+        var objPerson = [
+            { name: 'Nguyen Van A', email: 'nguenvana@abc.com' },
+            { name: 'Nguyen Van b', email: 'nguenvanb@abc.com' },
+            {name: 'Nguyen Van c', email: 'nguenvanc@abc.com'},
+        ];
+        var objStore = indexedDB.creatObjectStore('Person',{
+            keyPath: 'id',autoIncrement = true
+        )};
+        for(item in objPerson){
+            objStore.put(objPerson[item]);
+            console.log(objPerson[item].name + "Added");
+        }
+        var trans = indexedDB.transaction(['Person'],IDBTransaction.READ_WRITE).objStore('Person');
+        var request=trans.get(2);
+        request.onsuccess=function(event){
+            alert('Name'+ request.result.name);
+        }
+        request.error = function () {
+            console.log('error');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

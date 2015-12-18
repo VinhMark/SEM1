@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>A Compex Rollover</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        if (document.images) {
+            flyText = new Image
+            tankText = new Image
+            bgText = new Image
+            heliText = new Image
+
+            flyText.src = "image/blue.jpg"
+            tankText.src = "image/red.jpg"
+            bgText.src = "image/logo.png"
+            heliText.src="image/ip5.jpg"
+        } else {
+            flyText = ""
+            tankText = ""
+            bgText = ""
+            heliText = ""
+            document.textField = ""
+        }
+    </script>
+</head>
+<body bgcoclor="#EECC99">
+    <table>
+        <tr valign="top">
+            <td>
+                <img src="image/loading.gif" width="375" height="26" alt="Leonardo`sInvention" /><br />
+                <a href="gọi hàm.html" onmouseover="document.textField.src" onmouseout="document.textField.scr=bgText.src"><img src="image/logo_mp3.jpg" width="293" height="165" border="0" vspace="20" alt="Flying Machine>"</a><br />
+                <a href="HtmlPage.html" onmouseover="document.textField.src" onmouseout="document.textFied.scr = bgText.src"><img src="image/logo_youtube.png"width="325" height="92" border="0"alt="Tank" /></a><br />
+                <a href="HtmlPage.html" onmouseover="document.textField.src" onmouseout="document.textFied.scr = bgText.src"><img src="image/red.jpg"width="224"height="160" border="0" vspace="20" alt="Helicoper" /></a><br />
+            </td>
+            <td>
+                <img src="image/logo.png" width="144"height="219" hspace="50"alt="Davinci" /><br />
+                <img src="image/logo_mp3.jpg" width="208"height="27" name="textField"vspace="20" alt="Text Feild" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

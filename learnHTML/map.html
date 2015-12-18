@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        function CheckGeolocation() {
+            if (window.navigator.geolocation) {
+                //document.getElementById('resultlocation').innerHTML = 'Suppoted';
+                var options = {
+                    enableHightAccuracy: true,
+                    MaximunAge: 50000,
+                    timeout:6000
+                };
+                navigator.geolocation.getCurrentPosition(showlocation, errorHandler, options);
+            } else {
+                document.getElementById('resultlocation').innerHTML = 'not Suppoted';
+            }
+        }
+        function showlocation(position) {
+            document.getElementById('resultlocation').innerHTML =
+                'Vĩ độ hiện tại :' + position.coords.latitude
+                + ' ' + 'Kinh độ hiện tại là :' + position.coords.longitude;
+        }
+        function errorHandler(error) {
+            debugger;
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('resultlocation').innerHTML += 'not permission';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('resultlocation').innerHTML += 'not unvaiable';
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('resultlocation').innerHTML += ' timeput';
+                    break;
+            }
+        }
+        function initialize() {
+            //loadding google maps
+            var num = new google.maps.LatLng(51.52866, -0.173171);
+            var myoptions = {
+                zoom: 16,
+                center: num,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            var divMap = document.getElementById('mapGoogle');
+            var mymap = new google.maps.Map(divMap, myoptions);
+            var optionMarker = {
+                position: num,
+                map: mymap,
+                title:'Đây là địa chỉ'
+            };
+        var maker = new google.maps.Maker(optionMarker);
+        }
+        
+    </script>
+</head>
+<body onload="initialize()">
+    <!--<input type="button" value="Geolocation Support" onclick="CheckGeolocation()" />
+    <div id="resultlocation"></div>-->
+    <div id="mapGoogle" style="width:500px;height:500px;"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			input:required{
+				outline: 1px blue solid;
+				color: green;
+			}
+			input:required:valid{
+				outline: 1px yellow solid;
+			}
+			input:required:invalid{
+				outline: 1px red solid;
+			}
+		</style>
+	</head>
+<body>
+	<form>
+		<table>
+			<caption>Demo input data </caption>
+			<tr>
+				
+				<td colspan="2">
+					<input type="email" tabindex="1" placeholder="Email"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					url
+				</td>
+				<td>
+					<input type="url" maxlength="10" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Age
+				</td>
+				<td>
+					<input type="number" min="0" max="99"  />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Phone
+				</td>
+				<td>
+					<input type="tel" tabindex="2" 
+						placeholder="090456789" 
+						pattern="[0-9]{4,10}"
+						title="Please, input phone number"
+						/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Range
+				</td>
+				<td>
+					<input type="range" min="0" max="10"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					What 's color do you like?
+				</td>
+				<td>
+					<input type="color"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Birth date
+				</td>
+				<td>
+					
+					<!--<input type="date" />-->
+					<!--<input type="month" />-->
+					<!--<input type="week" />-->
+					<input type="time" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Payment method
+				</td>
+				<td>
+					<input type="text" list="payment"/>
+					<datalist id="payment">
+						<option value="Credit card"/>
+						<option value="Debit card"/>
+						<option value="ATM"/>
+						<option value="Cash"/>
+					</datalist>
+					<br/>
+					<select>
+						<option value="Creditcard">Credit card</option>
+						<option value="Debitcard">Debit card</option>
+						<option value="ATM"/>ATM</option>
+						<option value="Cash"/>Cash</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style='text-align: center;'>
+					<input type="submit" value="Submit" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+

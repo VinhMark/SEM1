@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Rollover</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        if (document.images) {
+            arrowRed = new Image
+            arrowBlue = new Image
+
+            arrowRed.src = "image/redjpg"
+            arrowBlue.src = "image/blue.jpg"
+        } else {
+            arrowRed = ""
+            arrowBlue = ""
+            document.arrow=""
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <h1><a href="gọi hàm.html" onmouseover="document.arrow.src=arrowRed.src"
+           onmouseout="document.arrow.src=arrowBlue.src">Next Page</a></h1><br />
+    <img src="image/blue.jpg" width="147" height="82" name="Arrow" alt="Arrow" />
+</body>
+</html>

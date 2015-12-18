@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function TinhLuong() {
+            var chucvu = parseInt(document.getElementById('slcchucvu').value);
+            var ngaycong = parseInt(document.getElementById('txtNgaycong').value);
+            document.getElementById('txtLuongThang').value = chucvu * ngaycong; 
+            <!--["NaN" ? 0 : 1 ] neu dung thi bang 0 neu sai thi bag 1  -->
+        }
+        function Conlai(){
+           
+            var thangluong= parseInt(document.getElementById('txtLuongThang').value);
+            var tamung = parseInt(document.getElementById("txtDaTamUng").value);
+            document.getElementById("txtConlai").value = thangluong - tamung;
+        }
+    </script>
+    <style>
+       .idata{
+           float:left;
+       }
+        .lbl{
+            float:left;
+            width:100px;
+        }
+        .row{
+            padding: 5px 0;
+            float:left;
+            width:100%;
+        }
+        .data{
+            width:200px;
+        }
+        
+    </style>
+   
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="row">
+            <h2>Tinh Luong Nhan Vien</h2>
+        </div>
+        <div class="lbl">Chuc Vu</div>
+        <div class="idata">
+            <select class="data" id="slcchucvu">
+                <option value="1000000">Giam Doc</option>
+                <option value="500000">Truong Phong</option>
+                <option value="400000">Pho Phong</option>
+                <option value="300000">Nhan Vien</option>
+                <option value="250000">Bao Ve</option>
+                <option value="250000">Tap Vu</option>
+            </select>
+        </div>
+        <div class="row">
+
+            <div class="lbl">Ngay Cong</div>
+            <div class="idata">
+                <input type="number" min="0" max="31" onkeyup="TinhLuong()" onmouseup="TinhLuong()" id="txtNgaycong" class="data" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="lbl">Luong thang</div>
+            <div class="idata">
+                <input type="text" disabled class="data" id="txtLuongThang" /><!--readonly chi de show ra choi-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="lbl">Da Tam Ung</div>
+            <div class="idata">
+                <input type="number" class="data" id="txtDaTamUng" oninput="Conlai()" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="lbl">Con Lai</div>
+            <div class="idata">
+                <input type="text" disabled class="data" id="txtConlai" />
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; 2014-2015
+    </footer>
+</body>
+</html>

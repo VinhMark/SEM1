@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function GaiPT() {
+            var heSoA = parseFloat(document.getElementById('txtA').value);
+            var heSoB = parseFloat(document.getElementById('txtB').value);
+            var heSoC = parseFloat(document.getElementById('txtC').value);
+            var txtresult = document.getElementById('Result');
+            if (heSoA == 0) {
+                if (heSoB == 0 && heSoC != 0) {
+                    txtresult.innerHTML = 'pt vo nghiem';
+                } else {
+                    if (heSoC == 0) {
+                        txtresult.innerHTML = 'pt vo so nghiem';
+                    } else {
+                        txtresult.innerHTML = 'pt co 1 nghiem x = ' + (-heSoC / heSoB).toString;
+                        }
+                    }
+                }else{//giai pt bac hai
+                    var delta = heSoB * heSoB - 4 * heSoA*heSoC;
+                    if(delta >= 0){
+                        var sqrt = Math.sqrt(delta);//lay can bac hai
+                        var x1 = ( - heSoB + sqrt) / 2 * heSoA;
+                        var x1 = ( - heSoB - sqrt) / 2 * heSoA;
+                        txtresult.innerHTML = 'pt co nghem x1 ='+ x1.toString();
+                        txtresult.innerTEXT += 'x2=' + x2.toString();
+                    }else{
+                        txtresult.innerHTML='pt vo nghiem';
+                    }
+                }
+            
+        }
+        function DEMO() {
+            var Age = parseInt(prompt('ban bao nhieu tuoi?'));
+            var txtresult = document.getElementById('Result');
+            //if (age < 18) {
+              //  txtresult.innerHTML = 'ban con hoc pho thing';
+
+            //} else {
+                //txtresult.innerHTML = 'ban lon r';
+            //}
+            txtresult.innerHTML =
+                (Age < 18)
+            ? 'ban dang hoc ph thng'
+            : 'ban da lon roi';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Giai PT Bac 2</h2>
+        Ax<sup>2</sup> + bx + c = 0<br />
+    </div>
+    <div>
+        <div class="title">He So A</div>
+        <input type="number" class="txtHeso" id="txtA" />
+    </div>
+    <div>
+        <div class="title">He So B</div>
+        <input type="number" class="txtHeso" id="txtB" />
+    </div>
+    <div>
+        <div class="title">He So C</div>
+        <input type="number" class="txtHeso" id="txtC" />
+        
+       
+    </div>
+        <input type="button" onclick="GaiPT()" value="Giai" />
+    </div>
+    <div id="Result"></divid>
+        <input type="button" onclick="DEMO()" value="DEMO" />
+
+</body>
+</html>

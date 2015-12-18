@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>VinhhMak</title>
+		<style>
+		
+		</style>
+		<script type="text/javascript">
+			function CheckValidInput(){
+				/*alert('You have click botton Submit');*/
+				
+			var userId = document.getElementById('txtUserId');
+			var password = document.getElementById('txtPassword')
+			if(userId.value == '' || password.value == ''){
+				alert('Please , input data!')
+			
+			}
+			else
+			alert('You logined with userID =' + userId.value);
+			
+			}
+		</script>
+	</head>	
+	<body>
+		<div class="swap">
+			<div class="row">
+				<div class="1b1" id="txtUserId">  
+				UserID 
+				</div>
+				<input type="text"/>
+		</div>
+		
+		<div class="row">
+				<div class="1b1" id="txtPassword">
+				Password 
+				</div>
+				<input type="password"/>
+		</div>
+		<div class="row">
+				<div class="1b1">
+				Password 
+				</div>
+				<input type="Submit" id="btnSubmit" value="Submit" 
+				onclick="CheckValidInput()"/>
+		</div>
+	</body>
+</html>

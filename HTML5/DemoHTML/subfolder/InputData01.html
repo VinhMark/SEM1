@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.wrap{
+				margin: 10px auto;
+				border: 1px solid #ccc;
+				width: 500px;
+				padding: 10px;
+				height: 110px;
+			}
+			label.title{
+				width: 200px;
+				float: left;
+				
+			}
+			.row{
+				padding-top: 2px;
+			}
+			output{
+				border: 1px solid #5c5c5c;
+				float: left;
+				width: 100px;
+				height: 23px;
+			}
+			.PaymentTitle{float: left;}
+		</style>
+	</head>
+<body>
+	<form oninput="x.value = parseInt(type.value) 
+				* parseInt(years.value)">
+		<div class="wrap">
+			<div class="row">
+				<label class="title">Membership Card: </label>
+				<select name="type">
+					<option value="500">Gold $500</option>
+					<option value="400">silver $400</option>
+					<option value="700">platinum $700</option>
+				</select>
+			</div>
+			<br/>
+			<div class="row">
+				<label class="title">Year</label>
+				<input type="number" name="years" value="1" min="1" max="5" step="1"  />
+			</div>
+			<br/>
+			<div class="row">
+				<label class="PaymentTitle">Anual payment Fees: $.</label>
+				<output name="x" for="type years" ></output>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+
+

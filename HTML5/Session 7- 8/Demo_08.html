@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            border-radius: 100px;
+            animation: myfirst 4s linear 1s infnite alternate;
+            animation-play-state: running;
+            /* Firefox: */
+            -moz-border-radius: 100px;
+            -moz-animation-name: myfirst;
+            -moz-animation-duration: 4s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-delay: 1s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-direction: alternate;
+            -moz-animation-play-state: running;
+            /* Safari and Chrome: */
+            -webkit-border-radius: 100px;
+            -webkit-animation-name: myfirst;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running;
+        }
+
+        @keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><b>Note:</b> Animation</p>
+    <div></div>
+</body>
+</html>

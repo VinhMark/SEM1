@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table{
+				border: 1px solid #000;
+				border-spacing: 0;
+			}
+			th, td{
+				border: 1px solid #000;
+			}
+			tr td:nth-child(5){
+				text-align: center;
+			}
+		</style>
+	</head>
+<body>
+	<table>
+		<caption>Bảng điểm sinh viên </caption>
+		<thead>
+			<tr>
+				<th colspan="2">MaSV</th>
+				<th>Tên Sinh Viên</th>
+				<th>Tên Môn Học</th>
+				<th>Điểm môn học</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>ABC0011</td>
+				<td>Nguyen Văn A</td>
+				<td rowspan="3">HTML 5 & CSS3</td>
+				<td rowspan="2">7</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>ABC0012</td>
+				<td>Nguyen Văn B</td>
+				
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>ABC0013</td>
+				<td>Nguyen Văn C</td>
+				<td>8</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td colspan="4">3</td>
+			
+			<td >7.5</td>
+		</tfoot>
+	</table>
+</body>
+</html>

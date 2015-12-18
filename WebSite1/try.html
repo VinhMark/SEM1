@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Root Calculator</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        ans = prompt("Enter a number", "")
+        try{
+            if(!ans|| isNaN(ans)){
+                throw new Error("Not a valid number")
+            }
+            alert("The square root of" +' '+ ans +' '+ 'is' + Math.sqrt(ans))
+        }
+        catch (errMsg) {
+            alert("errMsg.message")
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <noscript>
+        <h2>This page requires JaveScript</h2>
+    </noscript>
+</body>
+</html>

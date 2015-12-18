@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>VinhhMak</title>
+		<style>
+		
+		</style>
+		<script type="text/javascript">
+			function CheckAge(){
+				/*alert('You have click botton Submit');*/
+				var Age= parseInt(prompt("Please enter you age:"));
+				
+				var label= document.getElementById('lblcall');
+				/*if(Age <= 10){
+					label.innerHTML = "Em con be lam";
+				}
+				else if(Age > 10 && Age <= 22)
+				{
+					label.innerHTML = "Em da di hoc roi";
+				}
+				else
+					label.innerHTML = "Khong xac dinh tuoi";*/
+	
+				/*switch(Age){
+					case 10:
+						label.innerHTML = "Ban dang hoc lop 3";
+						break;
+				case 20:
+						label.innerHTML = "Ban dang hoc nam 2 dai hoc";
+						break;
+				default:
+						label.innerHTML = "Ban nghi hoc lau roi";
+						
+				}*/
+				for(var i=0; i<=Age;i++)
+				{
+					label.innerHTML = label.innerHTML + "Em dang gho lop 3 "
+				}
+			}
+		</script>
+	</head>	
+	<body>
+		<div class="swap">
+			<div class="row">
+				<input type="Submit" id="btnSubmit" value="canculate Age" onclick="CheckAge()"/>
+				 
+				</div>
+				
+		</div>
+		
+		<div class="row">
+				<div class="lbl" id="lblcall">
+				</div>
+		</div>
+	
+	</body>
+</html>

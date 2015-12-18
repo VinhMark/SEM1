@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>GOt QuickTime?</title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript">
+        function hasQt() {
+            for (i = 0; i < navigator.plugins.length; i++) {
+                if (navigator.plugins[i].name.indexOf("QuickTime") >= 0) {
+                    return true
+                }
+            }
+            return false
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <h2 align="center">
+        Shoemaker-Levy 9 comet crashes into Jupiter in 1994<br />
+    <script language="JavaScript" type="text/javascript">
+        if(hasQt()){
+            document.write("<embed src='image/logo.png' width='320' height='250'></embed>")
+        }else{
+            document.write("<img src='image/ip5.jpg' alt='comet' width='320' height='208'\/>")
+        }
+    </script>    
+    </h2>
+</body>
+</html>

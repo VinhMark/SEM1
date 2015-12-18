@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		p.ex{
+			color: red;	
+		}
+
+	</style>
+</head>
+<body>
+	<p>
+		lorem djhkjfdhkja hajhfkj		
+	</p>
+	<div class="ex">
+		lorem djhkjfdhkja hajhfkj
+		lorem djhkjfdhkja hajhfkj
+	</div>
+</body>
+</html>
