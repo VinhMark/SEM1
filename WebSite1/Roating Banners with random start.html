@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Roating Banners random with start</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        adImages = new Array("image/banners1.gif", "image/banners2.gif", "image/banners3.gif")
+        imgCt = adImages.length
+        firstTime = true
+        function rotate() {
+            if (document.images) {
+                if (firstTime) {
+                    thisAd = Math.floor((Math.random() * imgCt))
+                    firstTime=false
+                } else {
+                    thisAd++
+                    if (thisAd == imgCt) {
+                        thisAd=0
+                    }
+                }
+                document.myPicture.src = adImages[thisAd]
+                setTimeout("rotate()",3*1000)
+            }
+        }
+    </script>
+</head>
+<body bgcoclor="#FFFFFF" onload="rotate()">
+    <center>
+        <img src="image/loading.gif" width="400" height="75" name="myPicture" alt="Ad Banner" />
+    </center>
+</body>
+</html>

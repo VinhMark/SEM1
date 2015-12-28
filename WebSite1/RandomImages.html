@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Images</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        myPix1 = new Array("image/banners1.gif", "image/banners2.gif", "banners3.gif")
+        myPix2 = new Array("image/bear.jpg", "image/tiger.jpg", "image/lion.jpg")
+        function choosePix() {
+            if (document.images) {
+                randomNum = Math.random((Math.random() * myPix1.length))
+                document.myPicture1.src = myPix1[randomNum]
+                randomNum = Math.floor((Math.random() * myPix2.length))
+                document.myPicture2.src=myPix2[randomNum]
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF" onload="choosePix()">
+    <img src="image/loading.gif" width="201" height="155" name="myPicture1" vspace="10" alt="some image" /><br />
+    <img src="image/next.png" width="262" height="252" name="myPicture2" vspace="10" alt="some iamge" /><br />
+</body>
+</html>

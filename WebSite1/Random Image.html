@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        myPix = new Array("image/lion.jpg", "image/tiger.jpg", "image/bear.jpg")
+        imgCt = myPix.length
+        function choosePic() {
+            if (document.images) {
+                randomNum = Math.floor((Math.random() * imgCt))
+                document.myPicture.src=myPix[randomNum]
+            }
+        }
+    </script>
+</head>
+<body bgcoclor="#FFFFFF" onload="choosePic()">
+    <img src="image/loading.gif" width="305" height="312" name="myPicture" alt="some image" />
+</body>
+</html>

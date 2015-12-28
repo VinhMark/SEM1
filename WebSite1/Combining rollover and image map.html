@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Conbining rollover and image map</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        if (document.images) {
+            img1 = new Image
+            img2 = new Image
+            img3 = new Image
+            imgRed = new Image
+            img1.src = "image/banners1.gif"
+            img2.src = "image/banners2.gif"
+            img3.src = "image/banners3.gif"
+            imgRed.src = "image/red.jpg"
+        } else {
+            img1 = ""
+            img2 = ""
+            img3 = ""
+            imgRed = ""
+            document.roll= ""
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <map name="roll_map" id="roll_map">
+        <area shape="rect" href="gọi hàm.html" onmouseover="document.roll.src=img1.src" onmouseout="document.roll.src=imgRed.src" coords="0,0,120,60" alt="Sample Chapter" />
+        <area shape="rect" href="HtmlPage.html" onmouseover="document.roll.src=img2.src" onmouseout="document.roll.src=imgRed.src" coords="0,60,120,120" alt="About a outhors" />
+        <area shape="rect" href="HtmlPage2.html" onmouseover="document.roll.src=img3.src" onmouseout="document.roll.src=imgRed.src" coords="0,120,120,180" alt="Buy a copy" />
+    </map>
+    <a href="HtmlPage3.html" onmouseover="document.roll.src=imgRed.src" ><img usemap="#roll_map" src="image/red.jpg" width="120" height="180" border="0" name="roll" align="left" hspace="20" alt="Book into" /></a>
+    <h3>Thanks for visiting our site. You'll find some of the best JavaScript informa-tion on the web right here, much of which we also put into our book , JavaScript for the Word Wide Web.Visual Quickstart Guide,Fifth Edition , published by Peachpit Press. You can find out more by clicking on the into box the left</h3>
+</body>
+</html>
