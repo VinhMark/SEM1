@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Nav Bar</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function writeContent(thisPage) {
+            parent.content.document.write("<html><head><\/head><body bgcolor='#FFFFFF'><h1>")
+            parent.content.document.write("You are now looking at page" + thisPage + ".")
+            parent.content.document.write("<\/h1><\/body><\/html>")
+            parent.content.document.close()
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <h1>Navigator Bar</h1>
+    <h2>
+        <a href="javascipt:writeContent(1)">Page 1</a><br />
+        <a href="javascipt:writeContent(2)">Page 2</a><br />
+        <a href="javascipt:writeContent(3)">Page 3</a>
+    </h2>
+</body>
+</html>

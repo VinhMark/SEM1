@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Nav Bar</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        pageArray = new Array("", "frame.html", "frame2.html", "kt java.html")
+        function setContent(thisPage) {
+            parent.content.document.location.href="pageArry[thisPage]"
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF">
+    <h1>Navigation Bar</h1>
+    <h2>
+        <a href="javascipt:setContent(1)">Page 1</a><br />
+        <a href="javascipt:setContent(2)">Page 2</a><br />
+        <a href="javascipt:setContent(3)">Page 3</a>
+    </h2>
+</body>
+</html>

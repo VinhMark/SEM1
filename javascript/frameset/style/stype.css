@@ -9,7 +9,7 @@ body{
 		margin-right: auto;
 	}
 #head{
-		height:40px;
+		height:100px;
 		background-color:#F5F5F5;
 		border:1px solid #CDCDCD;
 		margin-bottom:5px;
@@ -49,8 +49,9 @@ body{
 		float:left;
 		margin-bottom:5px;
 	}
-#footer{
-		height:40px;
-		background-color:#F5F5F5;
-		border:1px solid #CDCDCD;
+#table1{
+		width:100px;
+		float:right;
+		background-color:#f5f5f5;
+		
 	}

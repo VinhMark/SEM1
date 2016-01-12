@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Frameset</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        linkURL = "frame.html"
+        if (parent.document.URL) {
+            callingURL = parent.document.URL
+            if (callingURL.indexOf('?') != -1) {
+                callingURL.substring(callingURL.indexOf('?')+1,callingURL.length)
+            }
+        }
+        document.writeln("<frameset cols='30%,70%'>")
+        document.writeln("<frameset src='frame2.html'name='left'\/>")
+        document.writeln("<frame src='" + linkURL + "' name='content'\/>")
+        document.writeln("<\/frameset>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>
